@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "d1f865be-5e21-4e56-ad3b-0b114710ba27",
+		"name": "SoftWeek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19969754"
+	},
+	"item": [
+		{
+			"name": "categoria",
+			"item": [
+				{
+					"name": "listar-categorias",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-categorias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "salvar-categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"ELETRONICOS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/salvar-categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salvar-categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar-categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCategoria\": 6,\r\n    \"nome\": \"ELETRONICOS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/atualizar-categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atualizar-categoria"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subcategoria",
+			"item": [
+				{
+					"name": "listar-subcategorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-subcategorias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-subcategorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "salvar-subcategoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idCategoria\": 6,\r\n        \"nome\": \"COMPUTADORES\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/salvar-subcategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salvar-subcategoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar-subcategoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idSubcategoria\": 11,\r\n        \"idCategoria\": null,\r\n        \"nome\": \"CONSOLES\",\r\n        \"ativo\": true\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/atualizar-subcategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atualizar-subcategoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar-subcategorias-categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-subcategorias-categoria?idCategoria=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-subcategorias-categoria"
+							],
+							"query": [
+								{
+									"key": "idCategoria",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "produto",
+			"item": [
+				{
+					"name": "listar-produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "salvar-produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Playstation 4\",\r\n    \"descricao\": \"Videogame playstation 4 com 1 controle e 1 jogo\",\r\n    \"preco\": 2499.90,\r\n    \"idSubcategoria\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/salvar-produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salvar-produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar-produto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idProduto\": 21,\r\n    \"nome\": null,\r\n    \"descricao\": \"Videogame playstation 4 com 1 controle e 2 jogos\",\r\n    \"preco\": 2499.99,\r\n    \"idSubcategoria\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/atualizar-produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atualizar-produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar-produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/deletar-produto?idProduto=21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deletar-produto"
+							],
+							"query": [
+								{
+									"key": "idProduto",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
